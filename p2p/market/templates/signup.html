@@ -1,0 +1,85 @@
+{% load static  %}
+<!Doctype html>
+<html>
+	<head>
+		<title>Signup</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!--Bootstrap-->
+		<link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+		<style>
+			h1{
+				margin-top:90px;
+				margin-left: 30px;
+				color: pink;
+				text-transform: capitalize;
+				text-shadow: 3px 2px black;
+				height: 60px;
+				text-align: center;
+				font-family: "monospace serif sans-serif";
+			}
+			label{
+					margin-bottom: 30px;
+					 width:180px;
+    				clear:left;
+    				text-align:right;
+    				padding-right:20x;
+    				color: black;
+			}
+			.div1{
+					float:left;
+					 margin-left: 40px;
+			}
+
+
+		</style>
+	</head>
+
+	<body background={% static "images/21.jpg" %}>
+		<div style="text-align: center;">
+
+			<h1><font color="brown"> SIGNUP FOR P2P </font></h1>
+
+			<form method = "post">
+			{% csrf_token  %}
+				<div class="row">
+  					<div class="col-md-1 col-xs-12 col-sm-8">
+	  					<img class="img-circle" src={% static "images/12.jpg" %} height="250" width="250" style="margin-left: 250px;" >
+  					</div>
+  					<div class="col-md-11 col-xs-12 col-sm-4">
+						<div >
+					<label for="username">username: </label>
+						<input id="username" type="text" name ="username" value="{{ username }}">
+				</div>
+
+				<div>
+					<label for="name">Name:  </label>
+					<input id="name" type="text" name="name" value="{{ name }}">
+
+				</div>
+				<div>
+					<label for="email">Email:  </label>
+					<input id="email" type="text" name="email" value="{{ email }}">
+				</div>
+				<div>
+					<label for="password">Password: </label>
+					<input id="password" type="password" name="password" value="{{ password }}">
+				</div>
+					<input type="submit" class="btn btn-success"  value="Sign Up">
+
+					</div>
+				</div>
+
+
+			</form>
+		</div>
+		<!--Javascript files-->
+		<!--Jquery library-->
+		<script src="{% static "js/jquery-3.2.1.js" %}"></script>
+		<!--Bootstrap library-->
+		<script src="{% static "js/bootstrap.js" %}"></script>
+	</body>
+</html>
+		
