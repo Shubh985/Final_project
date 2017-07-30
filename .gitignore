@@ -1,3 +1,7 @@
+
 .idea/*
-*.[Pp]yc
-*.[Pp]yo
+*.pyc
+*.pyo
+migrations/*
+settings.py
+
