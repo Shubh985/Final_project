@@ -7,27 +7,7 @@ from django.shortcuts import render
 
 
 def signup_view(request):
-    # business logic.
-    if request.method == 'GET':
-        # display signup form
-        today = datetime.now
-        form = SignUpForm()
-        template_name = 'signup.html'
-    elif request.method == 'POST':
-        form = SignUpForm(request.POST)
-        if form.is_valid():
-            username = form.cleaned_data['username']
-            email = form.cleaned_data['email']
-            name = form.cleaned_data['name']
-            password = form.cleaned_data['password']
-            # insert data to db
-            new_user = UserModel(name=name, password=make_password(password), email=email, username=username)
-            new_user.save()
-            return redirect("/login/")
-        else:
-            return redirect("/signup/")
-
-    return render(request, template_name, {'form':form},{'today':today})
+    return render(request,'signup.html')
 
 # login view
 

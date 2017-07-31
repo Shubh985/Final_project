@@ -18,7 +18,7 @@ from django.contrib import admin
 from views import signup_view,login_view,login_fail,login_success
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^sign',signup_view),
+    url(r'',signup_view),
     url(r'^login/',login_view),
     url(r'^fail/',login_fail),
     url(r'^success/',login_success),
