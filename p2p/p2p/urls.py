@@ -20,13 +20,13 @@ from views import login_view,feed_view,post_view,like_view,comment_view,welcome_
 from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^signup/', signup_view),
+    url(r'/', signup_view),
     url(r'^login/', login_view),
     url(r'^feed/',feed_view),
     url(r'^post/',post_view),
     url(r'^like/', like_view),
     url(r'^logout/',logout_view),
     url(r'^comment/',comment_view),
-    url(r'',welcome_view),
+    # url(r'',welcome_view),
 
 ]

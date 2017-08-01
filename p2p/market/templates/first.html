@@ -32,7 +32,7 @@
 
 		</style>
 	</head>
-	<body background={% static "images/b.jpg" %}>
+	<body background={% static "images/2.jpg" %}>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<!--row3-->
@@ -40,7 +40,7 @@
 					<!--Left column-->
 					<div class="col-xs-12 col-sm-8">
 						<ul class="nav navbar-nav">
-							<li><a href="#" style="margin-right: 120px;">Upload to win</a></li>
+							<li><a href="#" style="margin-right: 120px;">P2P MARKET</a></li>
 							<li><input type="text" placeholder="search" ></input></li>
 							<li><a href="#" style="margin-right: 120px;">Help</a></li>
 							<li><a href="#">Message</a></li>
@@ -57,15 +57,15 @@
 
 		<div class="col-sm-4 col-sm-offset-4">
 			<div style="margin-bottom:50px;" >
-			<h1>UPLOAD TO WIN</h1>
-			<img src ={% static "images/upload-icon.png" %} height="200" width="200" >
+			<h1>P2P MARKETPLACE</h1>
+			<img src ={% static "images/p2.jpg" %} height="200" width="200" >
 
 			</div>
 			<form method = "post">
 				{% csrf_token %}
 				<div style="margin-right:40px; margin-top:20px;">
 
-					<a  value="signup" class="btn btn-success"  href="/signup">signup</a>
+					<a class="btn btn-success" value="signup" href="/admin">signup</a>
 
 					<a class="btn btn-success" value="login" href="/login" style="margin-left: 50px;">login</a>
 
@@ -96,7 +96,7 @@
 					<!--Right column-->
 					<div class="col-xs-12 col-sm-4">
 						<p class="navbar-text">
-							&copy; 2017 Upload to win
+							&copy; 2017 P2P Marketplace
 						</p>
 					</div>
 					<!--./Right column-->
