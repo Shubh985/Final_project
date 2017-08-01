@@ -1,4 +1,4 @@
-"""p2p URL Configuration
+"""instagram URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -16,17 +16,23 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from views import signup_view
-from views import login_view,feed_view,post_view,like_view,comment_view,welcome_view,logout_view
+from views import login_view,feed_view,post_view,like_view,comment_view,welcome_view,logout_view,like_comm,search
 from django.conf.urls.static import static
+
+#all urls are created here
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'/', signup_view),
+    url(r'^sign/', signup_view),
     url(r'^login/', login_view),
     url(r'^feed/',feed_view),
     url(r'^post/',post_view),
     url(r'^like/', like_view),
     url(r'^logout/',logout_view),
     url(r'^comment/',comment_view),
-    # url(r'',welcome_view),
+    url(r'',welcome_view),
+    url(r'^like_comm/$', like_comm),
+    url(r'^search/$',search),
 
 ]
+
+
